@@ -1,0 +1,97 @@
+html {
+    height: 100%;
+    background: radial-gradient(ellipse at bottom, #ffcccc 0%, #ff9c9c 100%);
+    overflow: hidden;
+  }
+   
+  body {
+    background: transparent;
+    color: #ffffff;
+  }
+   
+  .bluelight {
+    text-shadow: 0 0 10px #ffc9ea,
+                 0 0 20px #ffc9ea,
+                 0 0 30px #ffc9ea,
+                 0 0 40px #ffc9ea,
+                 0 0 70px #ffc9ea,
+                 0 0 80px #ffc9ea,
+                 0 0 100px #ffc9ea,
+                 0 0 150px #ffc9ea;
+  }
+   
+  .clock {
+      overflow: hidden;
+  }
+   
+  .col-md-12 {
+      overflow: hidden;
+      padding-bottom: 20px;
+  }
+   
+  .top-section {
+    margin-bottom: 0px;
+    border-radius: 5px 5px 0px 0px;
+    background-color: #ff93ae;
+    border: 0px;
+  }
+   
+  .bottom-section {
+    margin-top: 0px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: #ff6485;
+    border: 0px;
+  }
+   
+  @media (min-width: 768px) {
+    .num {
+      font-size: 100px;
+    }
+  }
+   
+  @media (max-width: 767px) {
+    .num {
+      font-size: 50px;
+    }
+  }
+   
+  @media (max-width: 480px) {
+    .num {
+      font-size: 30px;
+    }
+  }
+   
+  @media (min-width: 768px) {
+    .text {
+      font-size: 35px;
+    }
+  }
+   
+  @media (max-width: 767px) {
+    .text {
+      font-size: 20px;
+    }
+  }
+   
+  @media (max-width: 480px) {
+    .text {
+      font-size: 15px;
+    }
+  }
+   
+  @media (min-width: 768px) {
+    body {
+      padding-top: 75px;
+    }
+  }
+   
+  h1 {
+    padding-top: 10px;
+  }
+   
+  @media (min-width: 768px) {
+    h1 {
+      margin-bottom: 75px;
+      font-size: 100px;
+    }
+  }

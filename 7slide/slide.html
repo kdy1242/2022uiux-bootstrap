@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<style>
+
+
+
+body { background-color: black;
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;    
+  
+}
+
+img {
+  vertical-align: middle;
+
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  padding: 2px 16px;
+  color: rgb(0, 0, 0);
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  /* width: 16.66%; */
+  width: 12.5%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+<!-- <h2 style="text-align:center">flower Slideshow Gallery</h2> -->
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 8</div>
+    <img src="images/Carrying.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 8</div>
+    <img src="images/Donorpets.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 8</div>
+    <img src="images/Entship.png" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 8</div>
+    <img src="images/Mirimo.png" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 8</div>
+    <img src="images/Nazipsalab.png" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 8</div>
+    <img src="images/Searching.png" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">7 / 8</div>
+    <img src="images/ServiceDesign.png" style="width:100%">
+  </div>
+  <div class="mySlides">
+    <div class="numbertext">8 / 8</div>
+    <img src="images/VictoriaSecret.png" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="images/Carrying.png" style="width:100%" onclick="currentSlide(1)" alt="Carrying">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/Donorpets.png" style="width:100%" onclick="currentSlide(2)" alt="Donorpets">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/Entship.png" style="width:100%" onclick="currentSlide(3)" alt="Entship">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/Mirimo.png" style="width:100%" onclick="currentSlide(4)" alt="Mirimo">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/Nazipsalab.png" style="width:100%" onclick="currentSlide(5)" alt="Nazipsalab">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="images/Searching.png" style="width:100%" onclick="currentSlide(6)" alt="Searching">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="images/ServiceDesign.png" style="width:100%" onclick="currentSlide(7)" alt="ServiceDesign">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="images/VictoriaSecret.png" style="width:100%" onclick="currentSlide(8)" alt="VictoriaSecret">
+    </div>
+  </div>
+</div>
+<div class="caption-container">
+  <p id="caption">인생은 고(苦)<br>
+    그럼에도 고(go)<br>
+    
+    즐기면서 씽(sing)<br><br>
+    
+    -고고씽-
+</div>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+<center><button type="button" class="btn btn-outline-primary"><a href="../index.html">HOME</a></button></center>
+</body>
+</html>

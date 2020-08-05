@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>Card Clock Bootstrap 4 | BootstrapTema</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<link href="css/styles.css" rel="stylesheet" />
+<style>
+body{
+background: #ffffff;
+background: -webkit-linear-gradient(to right, #ffffff, #ffffff);
+background: linear-gradient(to right, #ffffff, #ffffff);
+}
+@font-face {
+/* download clock font: http://bootstraptema.ru/stuff/0-0-0-2478-20 */  
+font-family:"alarm clock";
+src:url("alarm_clock.eot?") format("eot"),
+url("alarm_clock.woff") format("woff"),
+url("alarm_clock.ttf") format("truetype"),
+url("alarm_clock.svg#alarmclock") format("svg");
+font-weight:normal;
+font-style:normal;
+}
+h3,a{font-family: 'alarm clock';}
+</style>
+</head>
+<body>
+
+
+<h2 class="text-center col-xl-12">시계</h2>
+<div class="clearfix"></div><hr />
+
+<!-- flexbox clock row --><div class="row">
+
+<div class="col-md-3" style="width: 30%; float:none; margin:0 auto">
+<div class="card bg-primary text-gray justify-content-center">
+<h3 class="card-title text-center">
+<div class="d-flex flex-wrap justify-content-center mt-2">
+<a><span class="badge hours"></span></a> :
+<a><span class="badge min"></span></a> :
+<a><span class="badge sec"></span></a>
+</div>
+</h3>
+</div>
+</div>
+
+
+
+</div><!-- /.clock row -->
+
+</div><!-- /.container -->
+
+<script>
+$(document).ready(function() {
+setInterval( function() {
+var hours = new Date().getHours();
+$(".hours").html(( hours < 10 ? "0" : "" ) + hours);
+}, 1000);
+setInterval( function() {
+var minutes = new Date().getMinutes();
+$(".min").html(( minutes < 10 ? "0" : "" ) + minutes);
+},1000);
+setInterval( function() {
+var seconds = new Date().getSeconds();
+$(".sec").html(( seconds < 10 ? "0" : "" ) + seconds);
+},1000);
+});
+</script>
+<br>
+<center><button type="button" class="btn btn-outline-primary"><a href="index.html">HOME</a></button></center>
+</body>
+</html>

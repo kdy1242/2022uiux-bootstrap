@@ -1,0 +1,82 @@
+/*W3hubs.com - Download Free Responsive Website Layout Templates designed on HTML5 CSS3,
+Bootstrap,Tailwind CSS which are 100% Mobile friendly. w3Hubs all Layouts are responsive cross browser supported,
+best quality world class designs.*/
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background: #ffffff;
+  font-family: 'Lato', sans-serif;
+}
+
+.col-xs-4 {
+  padding: 0;
+}
+
+.form-control {
+  border-color: #ff549b !important;
+}
+
+button,
+textarea {
+  border-radius: 0px !important;
+  font-size: 24px !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  width: 100px;
+  text-align: center;
+  padding: 15px !important;
+  outline: none;
+  background-color: #ff64be !important;
+  border-color: #ffffff !important;
+  color: #fff !important;
+}
+
+.col-xs-6 button {
+  width: 150px;
+}
+
+.form-control:nth-child(1) {
+  height: 150px;
+}
+
+.form-group {
+  margin-bottom: 0px;
+}
+
+.btn-outline-primary {
+  color: #ff2a71;
+  border-color: #ff2f86;
+}
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #ff2ea1;
+  border-color: #ff209b;
+}
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 36, 146, 0.5);
+}
+.btn-outline-primary.disabled, .btn-outline-primary:disabled {
+  color: #ff2a8d;
+  background-color: transparent;
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active, .btn-outline-primary:not(:disabled):not(.disabled).active, .show > .btn-outline-primary.dropdown-toggle {
+  color: #fff;
+  background-color: #ff266e;
+  border-color: #ff2592;
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .btn-outline-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 36, 164, 0.5);
+}
+
+a.bg-primary:hover, a.bg-primary:focus,
+button.bg-primary:hover,
+button.bg-primary:focus {
+  background-color: #ff3593 !important;
+}
